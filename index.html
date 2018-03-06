@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Random Password Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form class="form">
-        <label class="form__label">Number of Characters</label>
-        <input type="number" class="form__characters" min="8" max="100" value="8">
+    <div class="wrapper">
+        <form class="form">
+            <label for="characters" class="form__label">Number of Characters</label>
+            <div class="form__range-container">
+                <input type="range" id="characters" class="form__input -characters" min="12" max="100" value="12">
+            </div>
+            <span class="form__characters">12</span>
 
-        <label class="form__label">Use Numbers</label>
-        <input type="checkbox" class="form__checkbox numbers">
+            <label for="numbers" class="form__label -checkbox">Use Numbers</label>
+            <input type="checkbox" id="numbers" class="form__input -checkbox -numbers">
 
-        <label class="form__label">Use Symbols</label>
-        <input type="checkbox" class="form__checkbox symbols">
+            <label for="symbols" class="form__label -checkbox">Use Symbols</label>
+            <input type="checkbox" id="symbols" class="form__input -checkbox -symbols">
 
-        <button class="form__button">Generate Password</button>
-    </form>
+            <button class="form__button">Generate Password</button>
+        </form>
 
-    <div class="password"></div>
+        <div class="password"></div>
+    </div>
 
     <script src="app.js"></script>
 </body>
