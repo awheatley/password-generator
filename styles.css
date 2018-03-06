@@ -61,6 +61,7 @@
 .password {
   font-family: "Nunito", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 4rem;
-  color: #0276fd; }
+  color: #0276fd;
+  word-wrap: break-word; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -12,7 +12,7 @@ const charCount = document.querySelector('.form__characters');
 function generatePassword(num, chars) {
 	let password = '';
 
-	for (let i = 0; i <= num; i++) {
+	for (let i = 0; i < num; i++) {
 		password += chars.charAt(Math.floor(Math.random() * chars.length));
 	}
 
