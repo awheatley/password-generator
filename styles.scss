@@ -1,0 +1,108 @@
+// Variables
+$baseFont: 'Nunito', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$blue: #0276fd;
+$gray: #d3d3d3;
+
+
+// Mixins
+@mixin centeredBlock($width) {
+    display: block;
+    margin: 0 auto;
+    max-width: $width;
+}
+
+@mixin font($family, $size) {
+    font-family: $family;
+    font-size: $size;
+}
+
+@mixin size($width, $height: $width) {
+    height: $height;
+    width: $width;
+}
+
+
+// Styles
+* {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    @include centeredBlock(72.4rem);
+
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.form {
+    &__input.-characters {
+        @include size(80%, 1rem);
+
+        -webkit-appearance: none;
+        appearance: none;
+        background: $gray;
+        margin: 2rem 0 2rem;
+        outline: none;
+
+        &::-webkit-slider-thumb {
+            @include size(2rem);
+
+            -webkit-appearance: none;
+            appearance: none;
+            background: $blue;
+            border-radius: 50%;
+        }
+    }
+    &__characters {
+        @include font($baseFont, 2rem);
+
+        color: $blue;
+        display: block;
+        margin-bottom: 3rem;
+    }
+    &__label {
+        @include font($baseFont, 2.5rem);
+
+        &.-checkbox {
+            cursor: pointer;
+            transition: color 0.1s linear;
+            &:nth-of-type(2) {
+                display: inline-block;
+                margin-right: 2rem;
+            }
+            &.-selected {
+                color: $blue;
+            }
+        }
+    }
+    &__input {
+        &.-numbers,
+        &.-symbols {
+            display: none;
+        }
+    }
+    &__button {
+        @include font($baseFont, 2rem);
+
+        background-color: $blue;
+        border: none;
+        border-radius: 5rem;
+        color: white;
+        cursor: pointer;
+        display: block;
+        margin: 3rem auto;
+        outline: none;
+        padding: 1.5rem 3.2rem;
+        transition: background 0.5s ease;
+
+        &:hover {
+            background: darken($blue, 15%);
+        }
+    }
+}
+
+.password {
+    @include font($baseFont, 4rem);
+
+    color: $blue;
+}
