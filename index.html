@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Random Password Generator</title>
+    <meta charset="UTF-8">
+    <title>Random Password Generator</title>
 </head>
 <body>
+    <form class="form">
+        <label for="" class="form__label">Number of Characters</label>
+        <input type="number" class="form__characters" min="8" value="8">
+
+        <label for="" class="form__label">Use Numbers</label>
+        <input type="checkbox" class="form__checkbox">
+
+        <label for="" class="form__label">Use Symbols</label>
+        <input type="checkbox" class="form__checkbox">
+
+        <button>Generate Password</button>
+    </form>
+
+    <div class="password"></div>
 </body>
 </html>
